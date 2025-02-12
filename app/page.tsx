@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { FC, ReactNode } from "react";
 import { getServerSession } from "next-auth";
 import LineLoginButton from "../components/LineLoginButton";
 import { redirect } from "next/navigation";
-
-interface Props {
-  authenticated: ReactNode;
-  unauthenticated: ReactNode;
-}
 
 export const metadata: Metadata = {
   title: "Dokoya - Home",
   description: "Dokoya home page",
 }
 
- const Home: FC<Props> = async ({ authenticated, unauthenticated }) => {
+ const Home = async () => {
   const session = await getServerSession();
 
   // redirect to /map if user is authenticated

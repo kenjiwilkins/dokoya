@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { LocationInfo } from "@/components/LocationInfo";
 import { GoogleMap } from "@/components/GoogleMap";
 import { getServerSession } from "next-auth";
 
