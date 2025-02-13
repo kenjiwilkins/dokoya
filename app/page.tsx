@@ -7,9 +7,9 @@ import { redirect } from "next/navigation";
 export const metadata: Metadata = {
   title: "Dokoya - Home",
   description: "Dokoya home page",
-}
+};
 
- const Home = async () => {
+const Home = async () => {
   const session = await getServerSession();
 
   // redirect to /map if user is authenticated
@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   }
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <LineLoginButton/>
+    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
+        <LineLoginButton />
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -71,6 +71,6 @@ export const metadata: Metadata = {
       </footer>
     </div>
   );
-}
+};
 
 export default Home;

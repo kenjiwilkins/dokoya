@@ -5,7 +5,10 @@ import { signIn } from "next-auth/react";
 
 const LineLoginButton: FC = () => {
   return (
-    <button className="p-2 border rounded flex items-center justify-center gap-2" onClick={() => signIn("line")}>
+    <button
+      className="flex items-center justify-center gap-2 rounded border p-2"
+      onClick={() => signIn("line")}
+    >
       <Image
         aria-hidden
         src="/line_icon.png"

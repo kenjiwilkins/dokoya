@@ -1,19 +1,19 @@
-export function getCurrentLocation (): Promise<{ lat: number; lng: number }> {
+export function getCurrentLocation(): Promise<{ lat: number; lng: number }> {
   if (!navigator.geolocation) {
-    return Promise.reject(new Error('Geolocation is not supported'))
+    return Promise.reject(new Error("Geolocation is not supported"));
   } else {
     return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(
-        position => {
+        (position) => {
           resolve({
             lat: position.coords.latitude,
-            lng: position.coords.longitude
-          })
+            lng: position.coords.longitude,
+          });
         },
-        error => {
-          reject(error)
-        }
-      )
-    })
+        (error) => {
+          reject(error);
+        },
+      );
+    });
   }
 }
