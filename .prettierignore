@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+coverage/
+*.min.js
+*.bundle.js
+*.log
+.DS_Store
+.env
+pnpm-lock.yaml
+amplify_outputs.json

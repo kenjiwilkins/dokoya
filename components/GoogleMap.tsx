@@ -1,6 +1,11 @@
-"use client"
+"use client";
 import { FC, useState, useEffect } from "react";
-import { GoogleMap as GM, InfoWindow, LoadScript, Marker } from "@react-google-maps/api";
+import {
+  GoogleMap as GM,
+  InfoWindow,
+  LoadScript,
+  Marker,
+} from "@react-google-maps/api";
 import { getCurrentLocation } from "@/utils/location";
 
 interface Props {
@@ -29,64 +34,74 @@ interface SelectedInfo {
   userName: string;
   lastUpdated: string;
 }
-const PinIcon: FC<PinIconProps> = ({ lat, lng, imageUrl, userName, lastUpdated }) => {
+const PinIcon: FC<PinIconProps> = ({
+  lat,
+  lng,
+  imageUrl,
+  userName,
+  lastUpdated,
+}) => {
   const [selected, setSelected] = useState<SelectedInfo | null>(null);
   return (
-      <>
-        <Marker
-          key={`${lat * lng}`}
-          position={{
+    <>
+      <Marker
+        key={`${lat * lng}`}
+        position={{
+          lat,
+          lng,
+        }}
+        icon={{
+          url: imageUrl,
+          origin: new window.google.maps.Point(0, 0),
+          anchor: new window.google.maps.Point(15, 15),
+          scaledSize: new window.google.maps.Size(30, 30),
+        }}
+        onClick={() => {
+          setSelected({
+            lastUpdated,
             lat,
             lng,
+            imageUrl,
+            userName,
+          });
+        }}
+      />
+      {selected && (
+        <InfoWindow
+          position={{
+            lat: selected.lat,
+            lng: selected.lng,
           }}
-          icon={{
-            url: imageUrl,
-            origin: new window.google.maps.Point(0, 0),
-            anchor: new window.google.maps.Point(15, 15),
-            scaledSize: new window.google.maps.Size(30, 30),
+          onCloseClick={() => {
+            setSelected(null);
           }}
-          onClick={() => {
-            setSelected({
-              lastUpdated,
-              lat,
-              lng,
-              imageUrl,
-              userName,
-            })
-          }}
-        />
-        {selected && (
-          <InfoWindow
-            position={{
-              lat: selected.lat,
-              lng: selected.lng,
-            }}
-            onCloseClick={() => {
-              setSelected(null);
-            }}
-
-          >
-            <div className="text-black">
-              <p className="font-bold">Name: {selected.userName}</p>
-              <p className="font-bold">{selected.lastUpdated}</p>
-            </div>
-          </InfoWindow>
-        )}
-      </>
-  )
-}
+        >
+          <div className="text-black">
+            <p className="font-bold">Name: {selected.userName}</p>
+            <p className="font-bold">{selected.lastUpdated}</p>
+          </div>
+        </InfoWindow>
+      )}
+    </>
+  );
+};
 
 export const GoogleMap: FC<Props> = ({ apiKey, username, imageUrl }) => {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
-  const [initialLocation, setInitialLocation] = useState<{ lat: number; lng: number } | null>(null);
-  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [initialLocation, setInitialLocation] = useState<{
+    lat: number;
+    lng: number;
+  } | null>(null);
+  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
+    null,
+  );
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     getCurrentLocation()
       .then((location) => {
         setInitialLocation(location);
-        setLocation(location)
+        setLocation(location);
         setLastUpdated(new Date().toLocaleString());
       })
       .catch((error) => setError(error.message));
@@ -105,11 +120,9 @@ export const GoogleMap: FC<Props> = ({ apiKey, username, imageUrl }) => {
         mapContainerStyle={containerStyle}
         center={initialLocation}
         zoom={zoom}
-        options={
-          {
-            disableDefaultUI: true,
-          }
-        }
+        options={{
+          disableDefaultUI: true,
+        }}
       >
         <PinIcon
           lat={location.lat}
@@ -120,5 +133,5 @@ export const GoogleMap: FC<Props> = ({ apiKey, username, imageUrl }) => {
         />
       </GM>
     </LoadScript>
-  )
-}
+  );
+};

@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { getCurrentLocation } from "@/utils/location";
 
 export const LocationInfo = () => {
-  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
+  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
+    null,
+  );
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -26,4 +28,4 @@ export const LocationInfo = () => {
       <p>Longitude: {location.lng}</p>
     </div>
   );
-}
+};
