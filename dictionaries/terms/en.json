@@ -1,0 +1,125 @@
+{
+  "header": {
+    "title": "Dokoya Terms of Service"
+  },
+  "description": "These terms (hereinafter referred to as 'Terms') set forth the conditions for the use of all products and services related to Dokoya (hereinafter referred to as 'Services') provided by Dokoya, between the users of the Services (hereinafter referred to as 'Users') and Dokoya.",
+  "chapter1": {
+    "title": "1. Definitions",
+    "contents": [
+      "'App' refers to the web browser application software 'Dokoya' provided by Dokoya for the Services.",
+      "'Browser' refers to the website provided by Dokoya for using the Services via a web browser.",
+      "'Dokoya Account' refers to the account for the service 'Dokoya' operated by Dokoya."
+    ]
+  },
+  "chapter2": {
+    "title": "2. Agreement to Terms",
+    "contents": [
+      "Users can use the Services by agreeing to these Terms.",
+      "By agreeing to the Terms and creating a Dokoya Account, Users are deemed to have agreed to these Terms.",
+      "If Users do not agree to these Terms, they cannot use the Services.",
+      "If Users are minors, they can use the Services with the consent of their guardians."
+    ]
+  },
+  "chapter3": {
+    "title": "3. Changes to Terms",
+    "contents": [
+      "Dokoya may change these Terms within the scope of the purpose of the Services if Dokoya deems it necessary."
+    ]
+  },
+  "chapter4": {
+    "title": "4. User Responsibilities",
+    "contents": [
+      "Users must not engage in the following acts when using the Services:",
+      "・Acts that violate laws or public order and morals",
+      "・Acts that infringe on the intellectual property rights of Dokoya or third parties",
+      "・Acts that cause damage to Dokoya or third parties",
+      "・Acts that disadvantage Dokoya or third parties",
+      "・Other acts that Dokoya deems inappropriate"
+    ]
+  },
+  "chapter5": {
+    "title": "5. Account",
+    "contents": [
+      "A Dokoya Account is required for users to use the Services.",
+      "When registering an email address for the use of the Services, users must strictly manage it to prevent unauthorized use at their own responsibility.",
+      "Dokoya may suspend or delete a user's account if the user violates these Terms or if Dokoya deems it inappropriate.",
+      "If users wish to withdraw from the Services, they can delete their Dokoya Account."
+    ]
+  },
+  "chapter6": {
+    "title": "6. Privacy",
+    "contents": [
+      "Dokoya respects the privacy of users and handles their personal information appropriately."
+    ]
+  },
+  "chapter7": {
+    "title": "7. Ownership of Rights",
+    "contents": [
+      "The intellectual property rights related to the Services belong to Dokoya or third parties partnering with Dokoya."
+    ]
+  },
+  "chapter8": {
+    "title": "8. Provision of Services",
+    "contents": [
+      "The Services are provided through a browser.",
+      "Dokoya provides the Services to users in accordance with these Terms and the rules set forth within the Services.",
+      "Users may use the content provided by the Services within the scope of private use. Commercial use, sales, resale, and other uses outside of private use (including but not limited to reproduction, transmission, reprinting, editing, modification, and distribution) are prohibited.",
+      "Users must prepare the necessary personal computers, mobile phones, communication devices, operating systems, communication means, and power at their own expense and responsibility to use the Services.",
+      "Dokoya may limit the provision of all or part of the Services to users who meet the conditions that Dokoya deems necessary, such as age, identity verification, registration information, usage area, and Dokoya account usage status. Dokoya may display advertisements from Dokoya or third parties within the Services.",
+      "Dokoya may change, suspend, or terminate all or part of the Services at any time without prior notice to users if Dokoya deems it necessary. Dokoya is not responsible for any damages or losses incurred by users due to changes, suspensions, or terminations of the Services. The Services are provided only within Japan.",
+      "Users acknowledge that Dokoya may suspend the use of the Services for users who have not used the Services for more than two years from the last use date. In this case, the usage history of the Services will be deleted and cannot be restored. Users agree that Dokoya is not responsible for any losses or inconveniences suffered by users due to the suspension and deletion based on this section."
+    ]
+  },
+  "chapter9": {
+    "title": "9. Partner Services",
+    "contents": [
+      "The Services may include services or content provided by other businesses partnering with Dokoya. Responsibility for such services or content lies with the business providing them. Additionally, such services or content may be subject to terms of use and other conditions set forth by the providing business."
+    ]
+  },
+  "chapter10": {
+    "title": "10. Prohibited Acts",
+    "contents": [
+      "Users must not engage in the following acts when using the Services:",
+      "・Acts that violate laws or public order and morals",
+      "・Acts for the purpose of business, advertising, promotion, solicitation, or other commercial purposes",
+      "・Acts for child abuse",
+      "・Acts of illegally collecting, disclosing, or providing personal information, registration information, usage history information, etc. of others",
+      "・Acts that interfere with the servers or network systems of the Services, acts of illegally manipulating the Services using BOTs, cheat tools, or other technical means, acts of intentionally exploiting defects in the Services, acts of accessing the Services using modified communication devices such as routing or jailbreaking, acts of making unreasonable inquiries or demands to Dokoya by repeatedly asking the same question more than necessary, and other acts that interfere with the operation of the Services by Dokoya or the use of the Services by other users",
+      "・Acts that Dokoya deems to be spam",
+      "・Acts of providing benefits to anti-social forces",
+      "・Acts that infringe on the intellectual property rights of Dokoya or third parties",
+      "・Acts that cause damage to Dokoya or third parties",
+      "・Acts that disadvantage Dokoya or third parties",
+      "・Acts that assist or encourage the above acts",
+      "・Other acts that Dokoya deems inappropriate"
+    ]
+  },
+  "chapter11": {
+    "title": "11. User Responsibilities",
+    "contents": [
+      "Users shall use the Services at their own responsibility and shall bear all responsibility arising from the use of the Services.",
+      "If users cause damage to Dokoya or third parties in connection with the use of the Services, such users shall compensate Dokoya or third parties for such damage at their own expense and responsibility."
+    ]
+  },
+  "chapter12": {
+    "title": "12. Disclaimer",
+    "contents": [
+      "Dokoya is not responsible for any damages incurred by users due to interruption, suspension, termination, unavailability, or changes in the provision of the Services, loss of data due to the use of the Services, machine failures, or any other damages related to the Services.",
+      "Dokoya is not responsible for any troubles that arise between users and other users in connection with the Services.",
+      "Dokoya is not responsible for any damages incurred by users in connection with the Services."
+    ]
+  },
+  "chapter13": {
+    "title": "13. Severability",
+    "contents": [
+      "If any provision or part of this agreement is found to be illegal, invalid, or unenforceable by a court of competent jurisdiction, arbitration body, or other authority, that provision or part will be severed to the extent of its illegality, invalidity, or unenforceability, and the remaining provisions and other parts will remain in full force and effect."
+    ]
+  },
+  "chapter14": {
+    "title": "14. Contact Method",
+    "contents": [
+      "For inquiries regarding the Services, please contact the following:",
+      "https://github.com/kenjiwilkins/dokoya/issues"
+    ]
+  }
+}

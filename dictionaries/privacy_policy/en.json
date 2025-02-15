@@ -1,0 +1,169 @@
+{
+  "header": {
+    "title": "Dokoya Privacy Policy"
+  },
+  "chapter1": {
+    "title": "1. Introduction",
+    "content": [
+      "Dokoya acquires personal information (hereinafter referred to as 'personal data') in order to provide the service and all related web services (hereinafter referred to as 'Dokoya services'). Dokoya considers the protection of personal data as one of the most important issues in its operations as an internet content service provider. Dokoya complies with the laws and regulations applicable in the countries or regions where Dokoya services are provided (hereinafter collectively referred to as 'applicable laws') and strives to appropriately protect personal data based on this privacy policy (hereinafter referred to as 'this policy').",
+      "This policy explains what kind of personal data Dokoya acquires, how it is used and provided, and how users can manage their own personal data."
+    ]
+  },
+  "chapter2": {
+    "title": "2. Scope of This Policy",
+    "content": [
+      "This policy applies to personal data acquired through Dokoya services, regardless of the country or region."
+    ]
+  },
+  "chapter2a": {
+    "title": "2.a. Scope",
+    "content": [
+      "This policy applies to personal data acquired through Dokoya services.",
+      "In the application of this policy, Michael Kenji Wilkins, the development manager of Dokoya, will be the administrator responsible for handling personal data."
+    ]
+  },
+  "chapter2b": {
+    "title": "2.b. Applicable Policy",
+    "content": [
+      "Dokoya handles personal data in accordance with this policy to the extent permitted by applicable law."
+    ]
+  },
+  "chapter3": {
+    "title": "3. Personal Data Acquired",
+    "content": [
+      "Dokoya acquires personal data through lawful and fair means as follows:",
+      "- Personal data provided by users\n- Personal data related to service usage\n- Other personal data lawfully acquired by Dokoya, including from third parties",
+      "If users do not provide the required information necessary for Dokoya services, they may not be able to use all or part of Dokoya services.",
+      "The personal data acquired includes, for example, the following:"
+    ]
+  },
+  "chapter3a": {
+    "title": "3.a. Personal Data Provided by Users",
+    "content": [
+      "Dokoya acquires personal data provided by users through the following methods:",
+      "- Information entered by users when using Dokoya services\n- Information provided by users when using Dokoya services"
+    ]
+  },
+  "chapter3b": {
+    "title": "3.b. Personal Data Related to Service Usage",
+    "content": [
+      "Dokoya acquires the following information when users use Dokoya services:",
+      "- Service usage status\n- Location information\n- Information about applications, browsers, and devices"
+    ]
+  },
+  "chapter3bi": {
+    "title": "3.b.i. Service Usage Status",
+    "content": [
+      "Dokoya automatically acquires information on when and how users use Dokoya services. The acquired information includes the date and time users used each service provided by Dokoya, the duration of stay on each service, the content and advertisements viewed, tapped, or clicked, and the usage status of various services and functions.",
+      "Dokoya does not use the content of messages exchanged between users and specific recipients other than Dokoya for purposes other than transmission."
+    ]
+  },
+  "chapter3bii": {
+    "title": "3.b.ii. Location Information",
+    "content": [
+      "Dokoya acquires users' location information when they use Dokoya services. Location information is acquired by obtaining the location information set on the user's device when using Dokoya services. If users refuse to provide location information, Dokoya will not acquire location information.",
+      "However, even if users refuse to provide location information, Dokoya may estimate users' location information using IP addresses or other location information."
+    ]
+  },
+  "chapter3biii": {
+    "title": "3.b.iii. Application, Browser, Device, and Network Information",
+    "content": [
+      "Dokoya acquires information about users' devices, browsers, and services provided (such as advertising identifiers that identify devices and browsers, Cookie IDs, device types, OS, language and time zone settings, browser types, and browser versions) and network information (such as the name of the telecommunications carrier and IP address)."
+    ]
+  },
+  "chapter3c": {
+    "title": "3.c. Examples of Personal Data Acquired from Third Parties",
+    "content": [
+      "Dokoya may acquire personal data from third parties, including partners. The personal data acquired includes, for example, the following:"
+    ]
+  },
+  "chapter3ci": {
+    "title": "3.c.i. Personal Data Acquired from Partners",
+    "content": [
+      "Dokoya may acquire the following personal data from partners with whom it has login integration:",
+      "- Information acquired by partners when users use Dokoya services\n- Information related to services provided by partners"
+    ]
+  },
+  "chapter4": {
+    "title": "4. Purpose of Using Personal Data",
+    "content": [
+      "Dokoya uses the acquired personal data for the following purposes:",
+      "- Providing, maintaining, protecting, and improving Dokoya services\n- Providing information about users\n- Communicating with users\n- Delivering and measuring the effectiveness of advertisements\n- Preventing, detecting, and responding to fraudulent activities\n- Fulfilling obligations based on laws and regulations"
+    ]
+  },
+  "chapter5": {
+    "title": "5. Provision of Personal Data to Third Parties",
+    "content": [
+      "Dokoya does not provide personal data to third parties without users' consent, except in the following cases:",
+      "- When required by law\n- When necessary to protect human life, body, or property"
+    ]
+  },
+  "chapter5a": {
+    "title": "5.a. Examples of Providing Personal Data to Third Parties",
+    "content": [
+      "Dokoya may provide personal data to third parties in the following cases:",
+      "- With users' consent\n- When required by law\n- When necessary for providing Dokoya services"
+    ]
+  },
+  "chapter5b": {
+    "title": "5.b. Provision of Personal Data in Business Succession",
+    "content": [
+      "In the event of a corporate transaction involving the acquisition, merger, or change of business entity related to Dokoya services covered by this policy, personal data may be transferred to the successor of the business to the extent permitted by applicable law."
+    ]
+  },
+  "chapter6": {
+    "title": "6. Management of Personal Data",
+    "content": [
+      "Dokoya appropriately manages and securely stores personal data. If users request the deletion of their account information, Dokoya will retain it for a certain period and then delete the account information in accordance with applicable law."
+    ]
+  },
+  "chapter7": {
+    "title": "7. Disclosure, Correction, and Deletion of Personal Data",
+    "content": [
+      "Users can request the disclosure, correction, or deletion of their personal data from Dokoya. Dokoya will respond to users' requests in accordance with applicable law."
+    ]
+  },
+  "chapter8": {
+    "title": "8. Use of Third-Party Modules and Cookies",
+    "content": [
+      "Dokoya may use third-party modules and cookies in Dokoya services."
+    ]
+  },
+  "chapter8a": {
+    "title": "8.a. Use of Third-Party Modules",
+    "content": [
+      "Dokoya may use third-party modules in Dokoya services."
+    ]
+  },
+  "chapter8ai": {
+    "title": "8.a.i. Google Analytics",
+    "content": [
+      "Dokoya may use Google Analytics in Dokoya services. Google Analytics is used to understand the usage status of Dokoya services. The information acquired by Google Analytics is managed in accordance with Google's privacy policy."
+    ]
+  },
+  "chapter8aii": {
+    "title": "8.a.ii. Sentry",
+    "content": [
+      "Dokoya may use Sentry in Dokoya services. Sentry is used to detect errors in Dokoya services. The information acquired by Sentry is managed in accordance with Sentry's privacy policy."
+    ]
+  },
+  "chapter9": {
+    "title": "9. Changes to the Privacy Policy",
+    "content": [
+      "Dokoya may change this policy. If there are any changes, Dokoya will announce the changes on Dokoya services."
+    ]
+  },
+  "chapter10": {
+    "title": "10. Other Important Information",
+    "content": [
+      "This policy may be revised. The latest privacy policy is always posted on this site, so please check the latest content of the privacy policy applicable to users."
+    ]
+  },
+  "chapter11": {
+    "title": "11. Contact Information",
+    "content": [
+      "For inquiries regarding this policy, please contact the following:",
+      "https://github.com/kenjiwilkins/dokoya/issues"
+    ]
+  }
+}
