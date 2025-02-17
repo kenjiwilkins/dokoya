@@ -1,12 +1,11 @@
 "use client";
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import {
   GoogleMap as GM,
   InfoWindow,
   LoadScript,
   Marker,
 } from "@react-google-maps/api";
-import { getCurrentLocation } from "@/utils/location";
 
 interface Props {
   apiKey: string;
@@ -69,23 +68,6 @@ const PinIcon: FC<PinIconProps> = ({ lat, lng, lastUpdated }) => {
 };
 
 export const GoogleMap: FC<Props> = ({ apiKey, lat, lng, timestamp }) => {
-  const [lastUpdated, setLastUpdated] = useState<string | null>(null);
-  const [initialLocation, setInitialLocation] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
-  const [location, setLocation] = useState<{ lat: number; lng: number } | null>(
-    null,
-  );
-  const [error, setError] = useState<string | null>(null);
-
-  if (error) {
-    return <div>{error}</div>;
-  }
-
-  // if (!location || !initialLocation) {
-  //   return <div>{lat}, {lng}, {timestamp}</div>;
-  // }
   return (
     <LoadScript googleMapsApiKey={apiKey}>
       <GM

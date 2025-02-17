@@ -1,5 +1,6 @@
 "use client";
-import { FC, useState } from "react";
+import { FC, useMemo, useState } from "react";
+import Link from "next/link";
 
 interface Props {
   username: string;
@@ -12,6 +13,14 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
   const [success, setSuccess] = useState(false);
   const [newUsername, setNewUsername] = useState(username);
   const [newEmail, setNewEmail] = useState(email);
+  const [agree, setAgree] = useState(false);
+  const isButtonDisabled = useMemo(() => {
+    return loading || newUsername.length === 0 || !agree;
+  }, [
+    loading,
+    newUsername,
+    agree,
+  ]);
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setLoading(true);
@@ -20,7 +29,7 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
     // Call API to update username
     // setLoading(false);
     // setSuccess(true);
-    console.log(error, success);
+    console.log(error, success, newEmail);
   }
   return (
     <form className="w-full" onSubmit={handleSubmit}>
@@ -56,11 +65,35 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
           onChange={(e) => setNewUsername(e.target.value)}
         />
       </fieldset>
+      <fieldset className="mt-4 w-full flex">
+        <label htmlFor="agree" className="flex items-center">
+          <input
+            type="checkbox"
+            id="agree"
+            name="agree"
+            className="mr-2"
+            checked={agree}
+            onChange={(e) => setAgree(e.target.checked)}
+          />
+          <div className="flex gap-1 items-center">
+          <span className="text-sm">
+            I agree to 
+          </span>
+          <Link href="/terms" target="_blank" className="text-blue-500 visited:text-purple-500 hover:text-blue-700">
+            Terms & Conditions
+          </Link>
+          <span className="text-sm">and</span>
+          <Link href="/privacy_policy" target="_blank" className="text-blue-500 visited:text-purple-500 hover:text-blue-700">
+            Privacy Policy
+          </Link>
+          </div>
+        </label>
+      </fieldset>
       <fieldset className="w-full pt-8">
         <button
           type="submit"
           className="w-full rounded-md bg-blue-500 p-4 font-bold text-white active:bg-blue-800 active:text-gray-200 disabled:cursor-not-allowed disabled:bg-gray-300"
-          disabled={loading || newUsername.length === 0}
+          disabled={isButtonDisabled}
         >
           {loading ? "Loading..." : "Register"}
         </button>

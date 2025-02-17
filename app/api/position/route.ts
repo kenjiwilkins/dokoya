@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   if (position.timestamp === 0) {
     return NextResponse.json(
       { message: "No position received" },

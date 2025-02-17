@@ -28,8 +28,6 @@ export default function MapPage() {
   async function getCurrentLocation() {
     try {
       const position = await getUserPosition();
-      console.log(lat, lng, timestamp);
-      console.log(position);
       if (!position) {
         console.log("No position received");
         return;
@@ -52,9 +50,10 @@ export default function MapPage() {
       await getCurrentLocation();
     }, 10000);
     getCurrentLocation();
-    console.log(apiKey)
     return () => clearInterval(interval);
-  }, []);
+  }, [
+    getCurrentLocation
+  ]);
 
   
   return (
