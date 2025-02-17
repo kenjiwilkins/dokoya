@@ -10,14 +10,13 @@ import { getCurrentLocation } from "@/utils/location";
 
 interface Props {
   apiKey: string;
-  username: string;
-  imageUrl: string;
+  lat: number;
+  lng: number;
+  timestamp: number;
 }
 interface PinIconProps {
   lat: number;
   lng: number;
-  imageUrl: string;
-  userName: string;
   lastUpdated: string;
 }
 
@@ -30,17 +29,9 @@ const zoom = 14;
 interface SelectedInfo {
   lat: number;
   lng: number;
-  imageUrl: string;
-  userName: string;
   lastUpdated: string;
 }
-const PinIcon: FC<PinIconProps> = ({
-  lat,
-  lng,
-  imageUrl,
-  userName,
-  lastUpdated,
-}) => {
+const PinIcon: FC<PinIconProps> = ({ lat, lng, lastUpdated }) => {
   const [selected, setSelected] = useState<SelectedInfo | null>(null);
   return (
     <>
@@ -50,23 +41,11 @@ const PinIcon: FC<PinIconProps> = ({
           lat,
           lng,
         }}
-        icon={
-          imageUrl
-            ? {
-                url: imageUrl,
-                origin: new window.google.maps.Point(0, 0),
-                anchor: new window.google.maps.Point(15, 15),
-                scaledSize: new window.google.maps.Size(30, 30),
-              }
-            : undefined
-        }
         onClick={() => {
           setSelected({
             lastUpdated,
             lat,
             lng,
-            imageUrl,
-            userName,
           });
         }}
       />
@@ -81,7 +60,6 @@ const PinIcon: FC<PinIconProps> = ({
           }}
         >
           <div className="text-black">
-            <p className="font-bold">Name: {selected.userName}</p>
             <p className="font-bold">{selected.lastUpdated}</p>
           </div>
         </InfoWindow>
@@ -90,7 +68,7 @@ const PinIcon: FC<PinIconProps> = ({
   );
 };
 
-export const GoogleMap: FC<Props> = ({ apiKey, username, imageUrl }) => {
+export const GoogleMap: FC<Props> = ({ apiKey, lat, lng, timestamp }) => {
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
   const [initialLocation, setInitialLocation] = useState<{
     lat: number;
@@ -101,39 +79,34 @@ export const GoogleMap: FC<Props> = ({ apiKey, username, imageUrl }) => {
   );
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    getCurrentLocation()
-      .then((location) => {
-        setInitialLocation(location);
-        setLocation(location);
-        setLastUpdated(new Date().toLocaleString());
-      })
-      .catch((error) => setError(error.message));
-  }, []);
-
   if (error) {
     return <div>{error}</div>;
   }
 
-  if (!location || !initialLocation) {
-    return <div>Loading...</div>;
-  }
+  // if (!location || !initialLocation) {
+  //   return <div>{lat}, {lng}, {timestamp}</div>;
+  // }
   return (
     <LoadScript googleMapsApiKey={apiKey}>
       <GM
         mapContainerStyle={containerStyle}
-        center={initialLocation}
+        center={{
+          lat,
+          lng,
+        }}
         zoom={zoom}
         options={{
           disableDefaultUI: true,
         }}
       >
         <PinIcon
-          lat={location.lat}
-          lng={location.lng}
-          imageUrl={imageUrl}
-          userName={username}
-          lastUpdated={lastUpdated || ""}
+          lat={lat}
+          lng={lng}
+          lastUpdated={
+            timestamp === 0
+              ? "No timestamp"
+              : new Date(timestamp).toLocaleString()
+          }
         />
       </GM>
     </LoadScript>

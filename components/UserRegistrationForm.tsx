@@ -11,6 +11,7 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [newUsername, setNewUsername] = useState(username);
+  const [newEmail, setNewEmail] = useState(email);
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setLoading(true);
@@ -32,8 +33,12 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
           id="email"
           name="email"
           className="w-full rounded bg-gray-50 p-2 text-gray-900 read-only:cursor-not-allowed read-only:bg-gray-200 read-only:text-gray-600 dark:bg-gray-800 dark:text-white read-only:dark:bg-gray-700 read-only:dark:text-gray-400"
-          readOnly
           value={email}
+          readOnly={email.length > 0}
+          required
+          onChange={
+            email.length > 0 ? undefined : (e) => setNewEmail(e.target.value)
+          }
         />
       </fieldset>
       <fieldset className="mt-4 w-full">

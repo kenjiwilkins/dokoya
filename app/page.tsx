@@ -1,73 +1,44 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import { getServerSession } from "next-auth";
+import Link from "next/link";
 import LineLoginButton from "../components/LineLoginButton";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Dokoya - Home",
   description: "Dokoya home page",
 };
 
-const Home = async () => {
-  const session = await getServerSession();
-
-  // redirect to /map if user is authenticated
-  if (session) {
-    redirect("/map");
-  }
-
+const Home = async ({searchParams}:{searchParams:{error:string}}) => {
+  const {error} = await searchParams
+  const errorMessage = error === "SESSION_EXPIRED" ? "Session expired" : "";
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+      {errorMessage.length > 0 && <div className="row-start-1 flex flex-col items-center gap-4">
+        <p className="text-xl text-red-500">{errorMessage}</p>
+        <p className="text-sm text-gray-500">Please log in again</p>
+      </div>}
       <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
         <LineLoginButton />
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        <a
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="/terms"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
+          Terms & Conditions
+        </Link>
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="/privacy_policy"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+          Privacy Policy
+        </Link>
+        <p className="text-sm text-gray-500">
+          © {new Date().getFullYear()} Dokoya. All rights reserved.
+        </p>
       </footer>
     </div>
   );
