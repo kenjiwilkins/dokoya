@@ -16,16 +16,6 @@ const MapPage = async () => {
     // Redirect to root if no session
     redirect("/?error=SESSION_EXPIRED");
   }
-  /**
-   * session {
-      user: {
-    name: 'Kenji Wilkins',
-    email: 'kenji.wilkins@gmail.com',
-    image: 'https://profile.line-scdn.net/0hrBlv9aL8LW1RDzjAbddSOm1KIwAmISslKTtmDydfdAopPGs8OWs3DHNac197P24_aWgxWXZddwko'
-  }
-}
-   */
-  console.log("session", session);
 
   const user = session?.user;
   return (

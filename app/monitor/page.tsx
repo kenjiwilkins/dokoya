@@ -51,23 +51,27 @@ export default function MapPage() {
     }, 10000);
     getCurrentLocation();
     return () => clearInterval(interval);
-  }, [
-    getCurrentLocation
-  ]);
+  }, [getCurrentLocation]);
 
-  
   return (
     <div>
       {lat && lng && timestamp ? (
         <div className="relative">
-        <GoogleMap apiKey={apiKey} lat={lat} lng={lng} timestamp={timestamp} />
-        <button className="fixed bottom-0 right-1/2 translate-x-1/2 m-4 px-4 py-2 flex gap-2 text-nowrap bg-blue-500 rounded-full">
-          <span className="text-white">Last updated:</span>
-          <span className="text-white">{new Date(timestamp).toLocaleString()}</span>
-        </button>
+          <GoogleMap
+            apiKey={apiKey}
+            lat={lat}
+            lng={lng}
+            timestamp={timestamp}
+          />
+          <button className="fixed bottom-0 right-1/2 m-4 flex translate-x-1/2 gap-2 text-nowrap rounded-full bg-blue-500 px-4 py-2">
+            <span className="text-white">Last updated:</span>
+            <span className="text-white">
+              {new Date(timestamp).toLocaleString()}
+            </span>
+          </button>
         </div>
       ) : (
-        <div className="flex justify-center items-center h-screen">
+        <div className="flex h-screen items-center justify-center">
           <LoadingSpinner />
         </div>
       )}

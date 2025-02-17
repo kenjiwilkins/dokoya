@@ -16,11 +16,7 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
   const [agree, setAgree] = useState(false);
   const isButtonDisabled = useMemo(() => {
     return loading || newUsername.length === 0 || !agree;
-  }, [
-    loading,
-    newUsername,
-    agree,
-  ]);
+  }, [loading, newUsername, agree]);
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
     setLoading(true);
@@ -65,8 +61,8 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
           onChange={(e) => setNewUsername(e.target.value)}
         />
       </fieldset>
-      <fieldset className="mt-4 w-full flex">
-        <label htmlFor="agree" className="flex items-center">
+      <fieldset className="mt-4 flex w-full">
+        <div className="flex items-center">
           <input
             type="checkbox"
             id="agree"
@@ -74,20 +70,27 @@ export const UserRegistrationForm: FC<Props> = ({ username, email }) => {
             className="mr-2"
             checked={agree}
             onChange={(e) => setAgree(e.target.checked)}
+            required
           />
-          <div className="flex gap-1 items-center">
-          <span className="text-sm">
-            I agree to 
-          </span>
-          <Link href="/terms" target="_blank" className="text-blue-500 visited:text-purple-500 hover:text-blue-700">
-            Terms & Conditions
-          </Link>
-          <span className="text-sm">and</span>
-          <Link href="/privacy_policy" target="_blank" className="text-blue-500 visited:text-purple-500 hover:text-blue-700">
-            Privacy Policy
-          </Link>
-          </div>
-        </label>
+          <label htmlFor="agree" className="flex items-center gap-1">
+            <span className="text-sm">I agree to</span>
+            <Link
+              href="/terms"
+              target="_blank"
+              className="text-blue-500 visited:text-purple-500 hover:text-blue-700"
+            >
+              Terms & Conditions
+            </Link>
+            <span className="text-sm">and</span>
+            <Link
+              href="/privacy_policy"
+              target="_blank"
+              className="text-blue-500 visited:text-purple-500 hover:text-blue-700"
+            >
+              Privacy Policy
+            </Link>
+          </label>
+        </div>
       </fieldset>
       <fieldset className="w-full pt-8">
         <button

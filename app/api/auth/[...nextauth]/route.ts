@@ -9,8 +9,8 @@ const options: AuthOptions = {
       authorization: {
         params: {
           scope: "profile openid email",
-        }
-      }
+        },
+      },
     }),
   ],
 };

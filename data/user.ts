@@ -10,3 +10,13 @@ export async function getUser(email: string) {
     }
   }
 }
+
+export async function createUser(email: string, name: string, image: string) {
+  try {
+    await sql`INSERT INTO users (email, name, image) VALUES (${email}, ${name}, ${image});`;
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
