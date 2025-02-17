@@ -3,32 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --experimental-https",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prettier:check": "prettier --check ."
+    "prettier:check": "prettier --check .",
+    "pull:env": "vercel env pull .env.development.local"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
     "@react-google-maps/api": "^2.20.6",
+    "axios": "^1.7.9",
     "next": "15.1.7",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "^7.54.2",
+    "web-push": "^3.6.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/web-push": "^3.6.4",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vercel": "^41.1.0"
   }
 }

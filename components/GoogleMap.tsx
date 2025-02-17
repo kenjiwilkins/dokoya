@@ -50,12 +50,16 @@ const PinIcon: FC<PinIconProps> = ({
           lat,
           lng,
         }}
-        icon={{
-          url: imageUrl,
-          origin: new window.google.maps.Point(0, 0),
-          anchor: new window.google.maps.Point(15, 15),
-          scaledSize: new window.google.maps.Size(30, 30),
-        }}
+        icon={
+          imageUrl
+            ? {
+                url: imageUrl,
+                origin: new window.google.maps.Point(0, 0),
+                anchor: new window.google.maps.Point(15, 15),
+                scaledSize: new window.google.maps.Size(30, 30),
+              }
+            : undefined
+        }
         onClick={() => {
           setSelected({
             lastUpdated,
